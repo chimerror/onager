@@ -1,6 +1,11 @@
 :: StoryTitle
 Struggle Session
 
+:: StoryData
+{
+  "ifid": "638B257C-3446-4E37-AC52-AB37BB8B1526"
+}
+
 :: Start
 Let me see where to begin...
 
