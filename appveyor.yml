@@ -17,4 +17,4 @@ install:
     chmod +x ./tweego
 build_script:
 - sh: >-
-    ./tweego -f snowman -o onager.html src
+    ./tweego -f snowman-1 -o onager.html src
