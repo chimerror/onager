@@ -1,0 +1,20 @@
+version: 1.0.{build}
+image: Ubuntu
+environment:
+  TWEEGO_VERSION: 2.0.0
+  STORY_FORMATS_VERSION: 20190129
+
+install:
+- sh: >-
+    wget http://www.motoslave.net/tweego/download.php/tweego-${TWEEGO_VERSION}-linux-x64.zip
+
+    wget http://www.motoslave.net/tweego/download.php/story-formats-${STORY_FORMATS_VERSION}.zip
+
+    unzip -nq tweego-${TWEEGO_VERSION}-linux-x64.zip && rm tweego-${TWEEGO_VERSION}-linux-x64.zip
+
+    unzip -nq story-formats-${STORY_FORMATS_VERSION}.zip && rm story-formats-${STORY_FORMATS_VERSION}.zip
+
+    chmod +x ./tweego
+build_script:
+- sh: >-
+    ./tweego -f snowman -o onager.html src
